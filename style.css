@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.left {
+    width: 33vw;
+    padding: 4px;
+}
+
+.logo img{
+    width: 80px;
+}
+
+.close {
+    display: none;
+}
+
+.home ul li {
+    width: 15px;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+    font-weight: bold;
+}
+
+.library {
+    min-height: 74vh;
+    position: relative;
+}
+
+.library .heading img {
+    width: 26px;
+}
+
+.library .heading {
+    gap: 10px;
+}
+
+.library .footer {
+    display: flex;
+    font-size: 10px;
+    gap: 9px;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    flex-wrap: wrap;
+    /* padding: 3px 2px; */
+}
+
+.library .footer a {
+    color: gray;
+}
+
+.lists {
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 10px 0;
+}
+
+.lists ul {
+    padding: 10px 12px;
+}
+
+.lists ul li {
+    list-style-type: decimal;
+    display: flex;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 13px;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+
+
+.right {
+    width: 64.3vw;
+    margin: 10px 0;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(34 34 34);
+    height: 78px;
+    border-radius: 8px;
+}
+
+.header>* {
+    padding: 10px;
+}
+
+.buttons>* {
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.signupbtn {
+    border: none;
+    background-color: rgb(34 34 34);
+    color: rgb(156, 154, 154);
+    font-weight: bold;
+    font-size: .98rem;
+    cursor: pointer;
+}
+
+.signupbtn:hover {
+    color: white;
+    font-size: 1rem;
+}
+
+.loginbtn {
+    cursor: pointer;
+    border-radius: 21px;
+    width: 70px;
+}
+
+.loginbtn:hover {
+    font-weight: bold;
+}
+
+.playlist {
+    padding: 10px;
+}
+
+.cardcontainer {
+    max-height: 64vh;
+    overflow-y: auto;
+    margin: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 159px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    margin: 5px;
+    transition: all .8s;
+}
+
+.card:hover {
+    background-color: #252525;
+    cursor: pointer;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.card p {
+    font-size: 12px;
+}
+
+.play {
+    width: 50px;
+    height: 40px;
+    background-color: #3be477;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    visibility: hidden;
+    transition: .3s;
+    bottom: 95px;
+    opacity: 0;
+    box-shadow: 0em 0 1em black;
+}
+
+.card:hover .play {
+    visibility: visible;
+    bottom: 100px;
+    opacity: 1;
+}
+
+.card .play span {
+    padding: 11px;
+}
+
+.card svg {
+    width: 30px;
+}
+
+.player {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px;
+    background-color: #52505081;
+    border-radius: 10px;
+    width: calc(64.3vw - 20px);
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.player .songbtns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.uppercontrol {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.seekbar {
+    height: .5px;
+    width: 75%;
+    border-radius: 13px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.seekbar .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 13px;
+    background-color: white;
+    position: relative;
+    bottom: 9px;
+    left: 0%;
+    transition: left .3s;
+}
+
+.songbtns {
+    cursor: pointer;
+}
+
+@media (max-width: 1350px) {
+    .left {
+        position: absolute;
+        left: -150%;
+        background-color: black;
+        width: 380px;
+        transition: all .3s;
+        z-index: 1;
+        padding: 0;
+    }
+
+    .right {
+        width: 96vw;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .player {
+        width: calc(100vw - 40px);
+        height: 60px;
+    }
+
+    .cardcontainer {
+        justify-content: center;
+        margin: 0;
+    }
+    .card{
+        width: 100vw;
+    }
+
+    .hamburger,
+    .close {
+        display: block;
+    }
+
+    .play {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 400px) {
+    .header > * {
+        padding: 0;
+    }
+    .right{
+        width: 94vw;
+    }
+}

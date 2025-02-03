@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music_Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <div class="container bg-black flex">
+        <div class="left ">
+            <div class="home m-1 bg-grey rounded p-1">
+                <div class="upperhead flex space-between">
+                    <div class="logo"><img src="public/mylogo.png" alt="logo"></div>
+                    <div class="close invert"><img src="public/cross.svg" alt=""></div>
+                </div>
+                <ul>
+                    <li><img class="invert" src="public/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="public/search.svg" alt="home">Search</li>
+                </ul>
+            </div>
+
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading flex items-center">
+                    <img class="invert m-1" src="public/library.svg" alt="">
+                    <h4>
+                        Your Library
+                    </h4>
+                </div>
+
+                <div class="lists">
+                    <ul>
+
+                    </ul>
+                </div>
+
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Safety &amp; Privacy
+                                Center</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a></div>
+                    <div><a draggable="false" href="https://www.spotify.com/legal/cookies-policy/" target="_blank"
+                            rel="noopener"><span>Cookies</span></a></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Right side container  -->
+        <div class="right bg-grey rounded p-1">
+            <div class="header">
+                <div class="nav">
+                    <div class="flex gap-10">
+                        <img src="public/hamburger.svg" class="hamburger invert" alt="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#000000" fill="none">
+                            <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#ffffff"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#000000" fill="none">
+                            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#ffffff"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="signupbtn">Sign Up</button>
+                    <button class="loginbtn">Log In</button>
+                </div>
+            </div>
+
+            <!-- Album -->
+            <div class="playlist">
+                <h1>Playlists</h1>
+                <div class="cardcontainer">
+
+                    <!-- Garhwali song album -->
+                    <div data-folder="garhwali" class="card">
+                        <div class="play">
+                            <span>
+                                <svg data-encore-id="icon" role="img" aria-hidden="true"
+                                    class="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                        <img src="https://travelsunlife.com/wp-content/uploads/2021/04/%E0%A4%9F%E0%A4%BF%E0%A4%B9%E0%A4%B0%E0%A5%80-%E0%A4%97%E0%A5%9D%E0%A4%B5%E0%A4%BE%E0%A4%B2.jpg" alt="">
+                        <h3>Garhwali Songs</h3>
+                    </div>
+
+                    <div data-folder="music" class="card">
+                        <div class="play">
+                            <span>
+                                <svg data-encore-id="icon" role="img" aria-hidden="true"
+                                    class="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/happy-songs-2020-1603993911.png?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*"
+                            alt="">
+                        <h3>Happy Music</h3>
+                    </div>
+
+                    <!-- Kumauni song album -->
+                    <div data-folder="Kumauni songs" class="card">
+                        <div class="play">
+                            <span>
+                                <svg data-encore-id="icon" role="img" aria-hidden="true"
+                                    class="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                        <img src="https://nature2kart.com/resources/media/1734158361_bdnbw_0.jpg" alt="">
+                        <h3>Kumauni Song</h3>
+                    </div>
+
+                    <!-- Hollywood  -->
+                    <div data-folder="hollywood" class="card">
+                        <div class="play">
+                            <span>
+                                <svg data-encore-id="icon" role="img" aria-hidden="true"
+                                    class="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e023d537424bb92aa2283f62595" alt="">
+                        <h3>Hollywood songs</h3>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Player Controler -->
+            <div class="player">
+                <div class="uppercontrol">
+                    <div class="songinfo"></div>
+                    <div class="songbtns invert">
+                        <img id="previous" src="public/prev.svg" alt="">
+                        <img id="play" src="public/play.svg" alt="">
+                        <img id="next" src="public/next.svg" alt="">
+                    </div>
+                    <div class="songtime"></div>
+                </div>
+                <div class="seekbar">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
